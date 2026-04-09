@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Meeting Minutes</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="screenshots/example.png">
+  </head>
+  <body>
+    <header>
+      <h1>Student Clock First Brainstorm</h1>
+      <h2>Brainstorming Meeting</h2>
+      <h3>April 8, 2026</h3>
+
+      <nav>
+        <a href="#attendance">Attendance</a><br>
+        <a href="#agenda">Agenda</a><br>
+        <a href="#unfinished">Unfinished Business</a><br>
+        <a href="#new">New Business</a><br>
+        <a href="#comments">Comments</a><br>
+        <a href="#media">Media</a><br>
+        <a href="#form">Form</a>
+      </nav>
+      <hr>
+    </header>
+
+    <main>
+      <section id="attendance">
+        <h2>Attendance</h2>
+        <ul>
+          <li>Alex</li>
+          <li>Jamie</li>
+          <li>Taylor</li>
+        </ul>
+      </section>
+
+      <section id="agenda">
+        <h2>Agenda</h2>
+        <ol>
+          <li>Discuss app goals</li>
+          <li>Assign team roles</li>
+          <li>Plan first prototype</li>
+        </ol>
+      </section>
+
+      <section id="unfinished">
+        <h2>Unfinished Business</h2>
+        <p>We still need to finalize the dashboard layout and task assignments from the last meeting.</p>
+      </section>
+
+      <section id="new">
+        <h2>New Business</h2>
+        <p>We discussed adding a study timer and progress tracker to the app.</p>
+        <div>This is a div element.</div>
+        <span>This is a span element.</span>
+      </section>
+
+      <section id="comments">
+        <h2>Comments / Questions / Concerns</h2>
+        <p><strong>Important:</strong> We should decide the minimum app features by next week.</p>
+        <p><em>Suggestion:</em> Add color coding for courses.</p>
+        <p><b>Note:</b> Keep the first version simple.</p>
+        <p><i>Reminder:</i> Everyone should review HTML basics before the next meeting.</p>
+      </section>
+
+      <section id="media">
+        <h2>Diagram</h2>
+        <img src="screenshots/example.png" alt="Meeting diagram example" width="300">
+
+        <h2>Audio Recording</h2>
+        <audio controls>
+          <source src="audio/meeting.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <h2>Video Recording</h2>
+        <video controls width="300">
+          <source src="video/meeting.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+
+        <details>
+          <summary>Extra Notes</summary>
+          <p>We discussed future features like reminders and notifications.</p>
+        </details>
+      </section>
+
+      <section id="form">
+        <h2>Feedback Form</h2>
+
+        <form>
+          <fieldset>
+            <legend>Meeting Feedback</legend>
+
+            <p>Name: <input type="text"></p>
+            <p>Date: <input type="date"></p>
+
+            <p>Did you attend?
+              <input type="radio" name="attend" value="yes"> Yes
+              <input type="radio" name="attend" value="no"> No
+            </p>
+
+            <p>Topics you liked:
+              <input type="checkbox" name="topic-dashboard"> Dashboard
+              <input type="checkbox" name="topic-timer"> Timer
+            </p>
+
+            <p>Favorite feature:
+              <input list="features" name="favorite-feature">
+              <datalist id="features">
+                <option value="Dashboard"></option>
+                <option value="Timer"></option>
+                <option value="Progress Tracker"></option>
+              </datalist>
+            </p>
+
+            <p>Role:
+              <select name="role">
+                <option>Developer</option>
+                <option>Designer</option>
+                <option>Tester</option>
+              </select>
+            </p>
+
+            <p>Comments:</p>
+            <textarea rows="4" cols="30"></textarea>
+            <br><br>
+
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Created for CSE 110 Lab 2</p>
+    </footer>
+  </body>
+</html>
