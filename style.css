@@ -1,0 +1,255 @@
+/* comment: root variables */
+:root {
+  --main-bg: #f4f8fb;
+  --card-bg: #ffffff;
+  --accent-color: rgb(50, 120, 200);
+  --text-color: var(--fallback-text, #222222);
+  --soft-blue: hsl(210, 70%, 92%);
+  --border-color: rgba(120, 140, 160, 0.8);
+}
+
+/* universal selector */
+* {
+  box-sizing: border-box;
+}
+
+/* element selector */
+body {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* selector list */
+h1, h2 {
+  color: var(--accent-color);
+  text-align: center;
+}
+
+/* id selector */
+#main-title {
+  text-decoration: underline;
+  width: 80%;
+  max-width: 900px;
+  min-width: 250px;
+  margin: 20px auto;
+  padding: 0.5rem;
+}
+
+/* class selector */
+.section {
+  background-color: var(--card-bg);
+  margin: 20px 30px 20px 30px;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-style: solid;
+  border-color: var(--border-color);
+  border-width: 2px;
+  border-radius: 12px;
+}
+
+/* combining two selectors */
+nav.section {
+  text-align: center;
+}
+
+/* attribute selector */
+input[type="text"] {
+  border: 2px solid gray;
+  padding: 8px;
+}
+
+/* descendant combinator */
+section p {
+  line-height: 1.5;
+}
+
+/* child combinator */
+ul > li {
+  margin: 5px 0;
+}
+
+/* adjacent sibling combinator */
+h2 + p {
+  color: orange;
+}
+
+/* general sibling combinator */
+h2 ~ ul {
+  background-color: rgba(200, 230, 255, 0.5);
+  padding: 0.75em;
+}
+
+/* pseudo-class selector */
+button:hover {
+  background-color: lightblue;
+}
+
+button:active {
+  background-color: blue;
+  color: white;
+}
+
+/* display examples */
+.inline {
+  display: inline;
+  background-color: #dff6ff;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background-color: #cfe8ff;
+  padding: 0.5rem;
+  border: 1px solid #7aa7cc;
+}
+
+/* sizing */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  max-width: 100%;
+  min-width: 200px;
+}
+
+/* position */
+.relative {
+  position: relative;
+  left: 0;
+  margin-top: 10px;
+  background-color: #eef7ff;
+  padding: 8px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+/* flexbox */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.flex > div {
+  background-color: #e6f2ff;
+  border: 1px solid #aac7e6;
+  padding: 10px;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.grid > div {
+  background-color: #edf8ff;
+  border: 1px solid #b7d7ea;
+  padding: 10px;
+  text-align: center;
+}
+
+/* :has() selector */
+section:has(ul) {
+  background-color: #eef7ff;
+}
+
+/* unit examples */
+.unit {
+  width: 50%;
+  padding: 1rem;
+  margin: 10px;
+  border-style: solid;
+  border-width: 2pt;
+  border-color: #888;
+  background-color: var(--soft-blue);
+}
+
+/* extra units to help satisfy lab requirements */
+header {
+  padding: 12px;
+}
+
+footer {
+  margin-top: 1cm;
+  padding: 10px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0.5em;
+  color: #1f4f82;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* auto margin example */
+audio,
+video {
+  display: block;
+  margin: auto;
+}
+
+/* background color examples */
+fieldset {
+  background-color: #fafcff;
+}
+
+button {
+  background-color: color-mix(in srgb, white 70%, lightblue 30%);
+  border: 2px solid #7aa7cc;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* more form styling */
+textarea,
+select,
+input[type="date"] {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem;
+}
+
+/* media query */
+details {
+  background-color: #f0f9ff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.4rem 0;
+  }
+}

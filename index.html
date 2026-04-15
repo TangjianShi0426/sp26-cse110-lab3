@@ -4,14 +4,21 @@
     <title>Meeting Minutes</title>
     <meta charset="UTF-8">
     <link rel="icon" href="screenshots/example.png">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      .quick-note {
+        color: teal;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Student Clock First Brainstorm</h1>
+      <h1 id="main-title">Student Clock First Brainstorm</h1>
       <h2>Brainstorming Meeting</h2>
       <h3>April 8, 2026</h3>
 
-      <nav>
+      <nav class="section">
         <a href="#attendance">Attendance</a><br>
         <a href="#agenda">Agenda</a><br>
         <a href="#unfinished">Unfinished Business</a><br>
@@ -24,8 +31,9 @@
     </header>
 
     <main>
-      <section id="attendance">
+      <section id="attendance" class="section">
         <h2>Attendance</h2>
+        <p class="quick-note">Team members present at the meeting.</p>
         <ul>
           <li>Alex</li>
           <li>Jamie</li>
@@ -33,28 +41,42 @@
         </ul>
       </section>
 
-      <section id="agenda">
+      <section id="agenda" class="section">
         <h2>Agenda</h2>
         <ol>
           <li>Discuss app goals</li>
           <li>Assign team roles</li>
           <li>Plan first prototype</li>
         </ol>
+
+        <div class="grid">
+          <div>Task 1</div>
+          <div>Task 2</div>
+          <div>Task 3</div>
+        </div>
       </section>
 
-      <section id="unfinished">
+      <section id="unfinished" class="section">
         <h2>Unfinished Business</h2>
         <p>We still need to finalize the dashboard layout and task assignments from the last meeting.</p>
       </section>
 
-      <section id="new">
+      <section id="new" class="section">
         <h2>New Business</h2>
-        <p>We discussed adding a study timer and progress tracker to the app.</p>
-        <div>This is a div element.</div>
+        <p style="color: orange;">We discussed adding a study timer and progress tracker to the app.</p>
+
+        <div class="flex">
+          <div>This is a div element.</div>
+          <div class="inline">Inline box</div>
+          <div class="inline-block">Inline-block box</div>
+        </div>
+
+        <div class="relative">Relative box</div>
+        <div class="unit">Unit example</div>
         <span>This is a span element.</span>
       </section>
 
-      <section id="comments">
+      <section id="comments" class="section">
         <h2>Comments / Questions / Concerns</h2>
         <p><strong>Important:</strong> We should decide the minimum app features by next week.</p>
         <p><em>Suggestion:</em> Add color coding for courses.</p>
@@ -62,9 +84,9 @@
         <p><i>Reminder:</i> Everyone should review HTML basics before the next meeting.</p>
       </section>
 
-      <section id="media">
+      <section id="media" class="section">
         <h2>Diagram</h2>
-        <img src="screenshots/diagram.png" alt="Meeting diagram example" width="300">
+        <img src="screenshots/validator.png" alt="Meeting diagram example" width="300">
 
         <h2>Audio Recording</h2>
         <audio controls>
@@ -84,7 +106,7 @@
         </details>
       </section>
 
-      <section id="form">
+      <section id="form" class="section">
         <h2>Feedback Form</h2>
 
         <form>
@@ -131,7 +153,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="section">
       <p>Created for CSE 110 Lab 2</p>
     </footer>
   </body>
